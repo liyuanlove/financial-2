@@ -1,4 +1,4 @@
-package com.ljh.enums;
+package com.ljh.financial.enums;
 
 /**
  * @author liangjh

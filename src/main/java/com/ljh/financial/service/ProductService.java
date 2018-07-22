@@ -1,4 +1,4 @@
-package com.ljh.manager.service;
+package com.ljh.financial.service;
 
 /**
  * @author liangjh

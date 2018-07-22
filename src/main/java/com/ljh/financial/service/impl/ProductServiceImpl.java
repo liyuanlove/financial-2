@@ -1,4 +1,4 @@
-package com.ljh.manager.service.impl;
+package com.ljh.financial.service.impl;
 
 import com.ljh.manager.service.ProductService;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.ljh.entity;
+package com.ljh.financial.entity;
 
 import lombok.Data;
 

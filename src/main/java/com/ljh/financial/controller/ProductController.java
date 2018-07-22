@@ -1,4 +1,4 @@
-package com.ljh.manager.controller;
+package com.ljh.financial.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
