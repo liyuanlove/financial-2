@@ -14,6 +14,9 @@
             <property name="mappers" value="com.ljh.financial.mapper.CommonMapper"/>
 
         </plugin>
+
+        <!--序列化-->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <commentGenerator>
             <property name="suppressAllComments" value="true"/>
             <property name="suppressDate" value="false"/>
@@ -33,17 +36,17 @@
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
-        <!--生成Model类存放位置-->
-        <javaModelGenerator targetPackage="com.ljh" targetProject="src">
+        <!--生成entity存放位置-->
+        <javaModelGenerator targetPackage="com.ljh.financial.entity" targetProject="src">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
-        <!--生成映射文件存放位置-->
-        <sqlMapGenerator targetPackage="com.ljh" targetProject="src">
+        <!--生成xml文件存放位置-->
+        <sqlMapGenerator targetPackage="com.ljh.financial.mapper" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
-        <!--生成Dao类存放位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.ljh" targetProject="src">
+        <!--生成mapper接口存放位置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.ljh.financial.mapper" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!--生成对应表及类名-->

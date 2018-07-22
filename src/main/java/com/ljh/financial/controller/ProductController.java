@@ -28,7 +28,7 @@ public class ProductController {
     @PostMapping
     @ApiModelProperty(value = "test")
     public ResponseEntity test(@RequestBody Product product) {
-        return ResponseEntity.ok("asdasdasd");
+        return ResponseEntity.ok(productService.addProduct(product));
     }
 
 }
