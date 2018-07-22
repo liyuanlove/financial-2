@@ -1,5 +1,6 @@
 package com.ljh.financial.service.impl;
 
+import com.ljh.financial.entity.Product;
 import com.ljh.financial.service.ProductService;
 import org.springframework.stereotype.Service;
 
@@ -10,4 +11,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProductServiceImpl implements ProductService {
 
+
+
+    @Override
+    public Product addProduct(Product product) {
+        return null;
+    }
 }

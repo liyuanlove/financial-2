@@ -1,11 +1,16 @@
 package com.ljh.financial.controller;
 
+import com.ljh.financial.entity.Product;
+import com.ljh.financial.service.ProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @author liangjh
@@ -13,12 +18,16 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @Api(description = "test")
-@RequestMapping("/")
+@RequestMapping("/api/v1/test")
 public class ProductController {
 
-    @GetMapping
+    @Resource
+    private ProductService productService;
+
+
+    @PostMapping
     @ApiModelProperty(value = "test")
-    public ResponseEntity test() {
+    public ResponseEntity test(@RequestBody Product product) {
         return ResponseEntity.ok("asdasdasd");
     }
 
