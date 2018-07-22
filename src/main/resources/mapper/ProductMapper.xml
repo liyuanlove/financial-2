@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ljh.ProductMapper" >
+  <resultMap id="BaseResultMap" type="com.ljh.Product" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="threshold_amount" property="thresholdAmount" jdbcType="DECIMAL" />
+    <result column="step_amount" property="stepAmount" jdbcType="DECIMAL" />
+    <result column="lock_term" property="lockTerm" jdbcType="SMALLINT" />
+    <result column="reward_rate" property="rewardRate" jdbcType="DECIMAL" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="memo" property="memo" jdbcType="VARCHAR" />
+    <result column="create_user" property="createUser" jdbcType="VARCHAR" />
+    <result column="update_user" property="updateUser" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, name, threshold_amount, step_amount, lock_term, reward_rate, status, memo, create_user, 
+    update_user, create_time, modify_time
+  </sql>
+</mapper>
