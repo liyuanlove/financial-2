@@ -1,6 +1,6 @@
 package com.ljh.financial.service.impl;
 
-import com.ljh.manager.service.ProductService;
+import com.ljh.financial.service.ProductService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
  * @create 2018-07-22 17:03
  **/
 @Service
-public class ProductServiceImpl implements ProductService{
+public class ProductServiceImpl implements ProductService {
 
 }
