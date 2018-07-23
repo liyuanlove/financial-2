@@ -1,5 +1,6 @@
 /target/
 !.mvn/wrapper/maven-wrapper.jar
+src/com/
 
 ### STS ###
 .apt_generated
@@ -23,3 +24,6 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+
+### 日志 ###
+*.log
