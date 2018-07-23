@@ -6,7 +6,7 @@ CREATE TABLE product(
   step_amount DECIMAL(15,3) NOT NULL DEFAULT 0 COMMENT '投资步长',
   lock_term SMALLINT NOT NULL DEFAULT 0 COMMENT '锁定期',
   reward_rate DECIMAL(5,3) NOT NULL COMMENT '收益率, 0-100百分比',
-  status VARCHAR(20) NOT NULL COMMENT '状态,销售中,锁定,已结束',
+  status VARCHAR(20) NOT NULL COMMENT 'AUDITING("审核中"),IN_SALE("销售中"),LOCKED("锁定"),FINISHED("已结束")',
   memo VARCHAR(200) DEFAULT NULL COMMENT '备注',
   create_user VARCHAR(50) DEFAULT NULL COMMENT '创建者',
   update_user VARCHAR(50) DEFAULT NULL COMMENT '更新者',
