@@ -1,20 +1,18 @@
 package com.ljh.financial.controller;
 
+import com.ljh.financial.dto.AddProductDto;
 import com.ljh.financial.entity.Product;
 import com.ljh.financial.service.ProductService;
-import freemarker.template.Configuration;
-import freemarker.template.Template;
-import freemarker.template.TemplateException;
+
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.BeanUtils;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author liangjh
@@ -30,9 +28,16 @@ public class ProductController {
 
 
     @PostMapping
-    @ApiModelProperty(value = "test")
-    public ResponseEntity test(@RequestBody Product product) {
+    @ApiOperation(value = "新增一个产品")
+    public ResponseEntity addProduct(@RequestBody @Validated AddProductDto dto) {
+        Product product = new Product();
+        BeanUtils.copyProperties(dto, product);
         return ResponseEntity.ok(productService.addProduct(product));
     }
 
+    @GetMapping("{id}")
+    @ApiOperation(value = "查询单个产品")
+    public ResponseEntity findOne(@PathVariable Integer id){
+        return ResponseEntity.ok(productService.getProductById(id));
+    }
 }

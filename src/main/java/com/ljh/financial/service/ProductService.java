@@ -15,6 +15,5 @@ public interface ProductService {
      */
     Product addProduct(Product product);
 
-    // TODO 根据Id查询产品
-    // TODO 数据校验
+    Product getProductById(Integer id);
 }

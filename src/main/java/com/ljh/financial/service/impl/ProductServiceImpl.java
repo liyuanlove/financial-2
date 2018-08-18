@@ -20,7 +20,12 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product addProduct(Product product) {
 
-        productMapper.insert(product);
+        productMapper.insertSelective(product);
         return product;
+    }
+
+    @Override
+    public Product getProductById(Integer id) {
+        return productMapper.selectByPrimaryKey(id);
     }
 }
