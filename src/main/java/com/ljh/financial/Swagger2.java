@@ -29,7 +29,7 @@ public class Swagger2 {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring boot 构建理财产品平台")
+                .title("Spring boot")
                 .version("1.0")
                 .build();
     }
