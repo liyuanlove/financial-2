@@ -1,4 +1,4 @@
-package com.ljh.financial.dto;
+package com.ljh.financial.dto.product;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

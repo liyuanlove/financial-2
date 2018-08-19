@@ -1,11 +1,11 @@
 package com.ljh.financial.controller;
 
-import com.ljh.financial.dto.AddProductDto;
+import com.ljh.financial.dto.product.AddProductDto;
+import com.ljh.financial.dto.product.ListProductDto;
 import com.ljh.financial.entity.Product;
 import com.ljh.financial.service.ProductService;
 
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.ResponseEntity;
@@ -39,5 +39,13 @@ public class ProductController {
     @ApiOperation(value = "查询单个产品")
     public ResponseEntity findOne(@PathVariable Integer id){
         return ResponseEntity.ok(productService.getProductById(id));
+    }
+
+    @PostMapping("list")
+    @ApiOperation(value = "分页查询产品")
+    public ResponseEntity listProduct(@RequestBody @Validated ListProductDto dto,
+                                      @RequestParam(defaultValue = "1") Integer pageNum,
+                                      @RequestParam(defaultValue = "10")Integer pageSize) {
+        return ResponseEntity.ok(productService.listProductByArgs(dto, pageNum, pageSize));
     }
 }
